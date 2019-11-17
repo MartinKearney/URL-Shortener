@@ -8,13 +8,15 @@
     "devserver": "nodemon server.js",
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix client",
-    "dev": "concurrently \"npm run devserver\" \"npm run client\""
+    "dev": "concurrently \"npm run devserver\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
   "author": "Martin Kearney",
   "license": "ISC",
   "dependencies": {
     "config": "^3.2.4",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.7.11",
     "shortid": "^2.2.15",
