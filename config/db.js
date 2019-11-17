@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
-const config = require('config');
 
-const db = config.get('mongoURI');
+// make environment variables available as key-value
+// pairs in 'process.env'.
+require('dotenv').config();
+
+// want to use env var instead
+const db = process.env.MONGO_URI;
 
 const connectDB = async () => {
   try {
