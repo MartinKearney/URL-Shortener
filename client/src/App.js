@@ -24,7 +24,7 @@ class App extends Component {
     const { outputUrl } = this.state;
     return (
       <div>
-        <h1>URL Shortener!</h1>
+        <h1>URL Shortener</h1>
         <UserInterface createUrl={this.createUrl} outputUrl={outputUrl} />
       </div>
     );
