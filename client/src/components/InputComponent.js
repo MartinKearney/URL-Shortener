@@ -29,11 +29,7 @@ class InputComponent extends Component {
             value={this.state.text}
             onChange={this.onChange}
           />
-          <input
-            type='submit'
-            value='Create URL'
-            className='btn btn-dark btn-block'
-          />
+          <input type='submit' value='Create URL' className='btn btn-dark' />
         </form>
       </div>
     );
