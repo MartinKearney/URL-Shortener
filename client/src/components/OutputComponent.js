@@ -10,7 +10,6 @@ const OutputComponent = ({ outputUrl }) => {
         value={outputUrl}
         readOnly
       />
-
       <div className='text-center'>
         <CopyToClipboard text={outputUrl}>
           <button className='btn btn-dark w-25 m-2'>Copy to Clipboard</button>

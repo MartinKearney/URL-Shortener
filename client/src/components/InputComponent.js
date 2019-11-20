@@ -15,12 +15,6 @@ class InputComponent extends Component {
   onSubmit = e => {
     e.preventDefault();
     this.props.createUrl(this.state.text);
-    // if (this.state.text === '') {
-    //   this.props.setAlert('Please enter something', 'light');
-    // } else {
-    //   this.props.createUrl(this.state.text);
-    //   this.setState({ text: '' });
-    // }
   };
 
   render() {
@@ -29,7 +23,7 @@ class InputComponent extends Component {
         <form onSubmit={this.onSubmit} className='form-group'>
           <input
             type='text'
-            className='form-control border border-dark'
+            className='form-control border border-dark mt-4 w-75 mx-auto'
             name='text'
             placeholder='Enter URL...'
             value={this.state.text}

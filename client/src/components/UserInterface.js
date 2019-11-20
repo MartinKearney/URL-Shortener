@@ -8,7 +8,6 @@ const UserInterface = ({ createUrl, outputUrl, clear }) => {
       <div className='form-group'>
         <InputComponent createUrl={createUrl} clear={clear} />
       </div>
-
       <div className='form-group'>
         <OutputComponent outputUrl={outputUrl} />
       </div>
