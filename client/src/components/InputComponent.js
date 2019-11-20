@@ -7,6 +7,11 @@ class InputComponent extends Component {
 
   onChange = e => this.setState({ [e.target.name]: e.target.value });
 
+  onClear = () => {
+    this.setState({ text: '' });
+    this.props.clear();
+  };
+
   onSubmit = e => {
     e.preventDefault();
     this.props.createUrl(this.state.text);
@@ -37,7 +42,11 @@ class InputComponent extends Component {
                 value='Create URL'
                 className='btn btn-dark m-2 pl-5 pr-5'
               />
-              <button type='button' className='btn btn-danger m-2 pl-4 pr-4'>
+              <button
+                type='button'
+                onClick={this.onClear}
+                className='btn btn-danger m-2 pl-4 pr-4'
+              >
                 Clear
               </button>
             </div>

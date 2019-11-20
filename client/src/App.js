@@ -20,6 +20,10 @@ class App extends Component {
     this.setState({ outputUrl: newUrl.data.shortUrl, loading: false });
   };
 
+  clearOutput = () => {
+    this.setState({ outputUrl: '' });
+  };
+
   render() {
     const { outputUrl } = this.state;
     return (
@@ -28,7 +32,11 @@ class App extends Component {
           <h1 className='display-3 text-center'>URL Shortener</h1>
         </div>
         <div className='container'>
-          <UserInterface createUrl={this.createUrl} outputUrl={outputUrl} />
+          <UserInterface
+            createUrl={this.createUrl}
+            outputUrl={outputUrl}
+            clear={this.clearOutput}
+          />
         </div>
       </div>
     );
