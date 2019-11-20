@@ -21,15 +21,27 @@ class InputComponent extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.onSubmit} className='form'>
+        <form onSubmit={this.onSubmit} className='form-group'>
           <input
             type='text'
+            className='form-control border border-dark'
             name='text'
             placeholder='Enter URL...'
             value={this.state.text}
             onChange={this.onChange}
           />
-          <input type='submit' value='Create URL' className='btn btn-dark' />
+          <div className='row'>
+            <div className='mx-auto'>
+              <input
+                type='submit'
+                value='Create URL'
+                className='btn btn-dark m-2 pl-5 pr-5'
+              />
+              <button type='button' className='btn btn-danger m-2 pl-4 pr-4'>
+                Clear
+              </button>
+            </div>
+          </div>
         </form>
       </div>
     );

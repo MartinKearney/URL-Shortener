@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import UserInterface from './components/UserInterface';
 
-// import './App.css';
+import './App.css';
 
 class App extends Component {
   state = {
@@ -24,8 +24,12 @@ class App extends Component {
     const { outputUrl } = this.state;
     return (
       <div>
-        <h1 className='display-3 text-center'>URL Shortener</h1>
-        <UserInterface createUrl={this.createUrl} outputUrl={outputUrl} />
+        <div className='jumbotron'>
+          <h1 className='display-3 text-center'>URL Shortener</h1>
+        </div>
+        <div className='container'>
+          <UserInterface createUrl={this.createUrl} outputUrl={outputUrl} />
+        </div>
       </div>
     );
   }
