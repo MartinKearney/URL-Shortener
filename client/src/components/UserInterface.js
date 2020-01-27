@@ -4,14 +4,14 @@ import OutputComponent from './OutputComponent';
 
 const UserInterface = ({ createUrl, outputUrl, clear }) => {
   return (
-    <Fragment>
-      <div className='form-group'>
+    <div className='ui-container'>
+      <div className='form-group mb-0'>
         <InputComponent createUrl={createUrl} clear={clear} />
       </div>
-      <div className='form-group'>
+      <div className='form-group mb-0'>
         <OutputComponent outputUrl={outputUrl} />
       </div>
-    </Fragment>
+    </div>
   );
 };
 

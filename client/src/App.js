@@ -36,8 +36,8 @@ class App extends Component {
     const { outputUrl, alertText } = this.state;
     return (
       <div>
-        <div className='jumbotron'>
-          <h1 className='display-3 text-center'>URL Shortener</h1>
+        <div className='title-container'>
+          <p className='title-text'>URL Shortener</p>
         </div>
         <div className='container'>
           <Alert alertText={alertText} />

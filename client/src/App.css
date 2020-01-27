@@ -1,13 +1,64 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  margin: 0;
+  /* background-image: url('./images/blue-stripes.jpg'); */
+  /* background-image: url('./images/black-wall.jpg'); */
+  /* background-image: url('./images/black1.jpg'); */
+  background-image: url('./images/blue-bubbles.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #000;
   color: #333;
+}
+
+.title-container {
+  background-color: aliceblue;
+  border: 5px solid #000;
+
+  margin: 2rem auto 2rem;
+  width: 50%;
+  text-align: center;
+}
+
+.title-text {
+  margin: 0;
+  font-size: 4rem;
+}
+
+.ui-container {
+  background-color: lightsteelblue;
+  border: 5px solid #000;
 }
 
 input {
   text-align: center;
+}
+
+h3.instruction-heading {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+h4.instruction {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+h5 {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
