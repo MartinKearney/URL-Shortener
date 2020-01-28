@@ -7,6 +7,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
+  text-align: center;
   line-height: 1.6;
   margin: 0;
   background-image: url('./images/blue-bubbles.jpg');
@@ -23,7 +24,6 @@ body {
   border: 5px solid #000;
   margin: 2rem auto 2rem;
   width: 50%;
-  text-align: center;
 }
 
 .title-text {
@@ -40,21 +40,11 @@ input {
   text-align: center;
 }
 
-h3.instruction-heading {
-  text-align: center;
+.instruction {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.instruction-heading {
   text-decoration: underline;
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
-
-h4.instruction {
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
-
-h5 {
-  text-align: center;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Instruction from './Instruction';
 
 const InputComponent = ({ clear, createUrl }) => {
   const [text, setText] = useState('');
@@ -17,10 +18,10 @@ const InputComponent = ({ clear, createUrl }) => {
 
   return (
     <div>
-      <h3 className='instruction-heading'>Step 1</h3>
-      <h4 className='instruction'>
-        Enter the full link you wish to shorten into the box below
-      </h4>
+      <Instruction
+        step={1}
+        text={'Enter the full link you wish to shorten into the box below'}
+      />
       <form onSubmit={onSubmit} className='form-group mb-0'>
         <input
           type='text'
@@ -30,12 +31,15 @@ const InputComponent = ({ clear, createUrl }) => {
           value={text}
           onChange={onChange}
         />
-        <h3 className='instruction-heading'>Step 2</h3>
-        <h4 className='instruction'>
-          Click the 'Create Short URL' button below to create your shortened
-          link
-        </h4>
-        <h5>&#40;or click 'Clear' at any time to reset this form&#41;</h5>
+        <Instruction
+          step={2}
+          text={
+            "Click the 'Create Short URL' button below to create your shortened link"
+          }
+        />
+        <h5 style={{ margin: '0.5rem 0 0' }}>
+          &#40;or click 'Clear' at any time to reset this form&#41;
+        </h5>
         <div className='row'>
           <div className='mx-auto mt-4 mb-2'>
             <input

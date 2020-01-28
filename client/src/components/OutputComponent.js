@@ -1,5 +1,6 @@
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import Instruction from './Instruction';
 
 const OutputComponent = ({ outputUrl }) => {
   return (
@@ -12,13 +13,12 @@ const OutputComponent = ({ outputUrl }) => {
           value={outputUrl}
           readOnly
         />
-        <div>
-          <h3 className='instruction-heading'>Step 3</h3>
-          <h4 className='instruction'>
-            Copy the shortened link to your clipboard by clicking the button
-            below
-          </h4>
-        </div>
+        <Instruction
+          step={3}
+          text={
+            'Copy the shortened link to your clipboard by clicking the button below'
+          }
+        />
         <div className='text-center'>
           <CopyToClipboard text={outputUrl}>
             <button className='btn btn-dark w-25 my-4'>
@@ -26,9 +26,8 @@ const OutputComponent = ({ outputUrl }) => {
             </button>
           </CopyToClipboard>
         </div>
-        <div style={{ marginBottom: '2rem' }}>
-          <h3 className='instruction-heading'>Step 4</h3>
-          <h4 className='instruction'>Go paste!</h4>
+        <div style={{ marginBottom: '1.5rem' }}>
+          <Instruction step={4} text={'Go paste!'} />
         </div>
       </div>
     </div>
