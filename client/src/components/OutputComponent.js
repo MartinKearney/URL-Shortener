@@ -28,7 +28,7 @@ const OutputComponent = ({ outputUrl }) => {
         </div>
         <div style={{ marginBottom: '2rem' }}>
           <h3 className='instruction-heading'>Step 4</h3>
-          <h4 className='instruction'>Paste like there's no tomorrow!</h4>
+          <h4 className='instruction'>Go paste!</h4>
         </div>
       </div>
     </div>
