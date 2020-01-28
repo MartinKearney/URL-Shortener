@@ -9,9 +9,6 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   margin: 0;
-  /* background-image: url('./images/blue-stripes.jpg'); */
-  /* background-image: url('./images/black-wall.jpg'); */
-  /* background-image: url('./images/black1.jpg'); */
   background-image: url('./images/blue-bubbles.jpg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -24,7 +21,6 @@ body {
 .title-container {
   background-color: aliceblue;
   border: 5px solid #000;
-
   margin: 2rem auto 2rem;
   width: 50%;
   text-align: center;
