@@ -1,6 +1,5 @@
 const express = require('express');
 const connectDB = require('./db_config/db');
-const favicon = require('serve-favicon');
 const path = require('path');
 
 const app = express();
@@ -10,7 +9,6 @@ connectDB();
 
 // Initialise middleware
 // allows us to accept json data into the API
-// **Look this up!**
 app.use(express.json({ extended: false }));
 
 // Define the api endpoints
@@ -19,8 +17,6 @@ app.use('/api/url', require('./routes/url'));
 
 // Serve static assets in production i.e. React
 if (process.env.NODE_ENV === 'production') {
-  // favicon
-  app.use(favicon(path.join(__dirname, 'client', 'build', 'favicon.ico')));
   // Set static folder
   app.use(express.static('client/build'));
   // Set catch all route
