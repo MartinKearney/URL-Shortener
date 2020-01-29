@@ -20,7 +20,7 @@ app.use('/api/url', require('./routes/url'));
 // Serve static assets in production i.e. React
 if (process.env.NODE_ENV === 'production') {
   // favicon
-  app.use(favicon(path.join(__dirname, 'client', 'public', 'favicon.ico')));
+  app.use(favicon(path.join(__dirname, 'client', 'build', 'favicon.ico')));
   // Set static folder
   app.use(express.static('client/build'));
   // Set catch all route
