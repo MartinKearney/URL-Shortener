@@ -8,7 +8,6 @@ const app = express();
 connectDB();
 
 // Initialise middleware
-// allows us to accept json data into the API
 app.use(express.json({ extended: false }));
 
 // Define the api endpoints
