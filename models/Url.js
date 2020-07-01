@@ -4,12 +4,8 @@ const urlSchema = new mongoose.Schema({
   urlCode: String,
   longUrl: String,
   shortUrl: String,
-  date: { type: String, default: Date.now }
+  date: { type: String, default: Date.now },
 });
 
-// May need to add 'required' and 'unique' options to some of
-// the above fields
-
-// Check that a collection called 'urls' is created
-
+// A collection called 'urls' will be created in MongoDB
 module.exports = mongoose.model('Url', urlSchema);

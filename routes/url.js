@@ -18,35 +18,29 @@ router.post('/shorten', async (req, res) => {
     return res.status(400).json({ msg: 'Invalid base url' });
   }
 
-  // generate code part i.e. the part that will come
-  // after the base url
-  // Is this required here? Better in 'else' clause below?
+  // generate code part i.e. the part that will come after the base url
   const urlCode = shortid.generate();
 
   // check validity of long url i.e. the one sent by client
   if (validUrl.isUri(longUrl)) {
     // valid, so check db to see if it exists already
     try {
-      // let url = await Url.findOne({longUrl:longUrl});
       let url = await Url.findOne({ longUrl });
-      // if found then return the url (it will have
-      // the various db fields)
+      // if found then return the url object from the db
       if (url) {
         res.json(url);
       } else {
         // not found so construct a short url
         const shortUrl = baseUrl + '/' + urlCode;
         // insert into db
-        // first create instance
+        // first, create instance
         url = new Url({
           longUrl,
           shortUrl,
           urlCode,
-          date: new Date()
+          date: new Date(),
         });
-        // what about default for 'date' field?
-        // save to db
-        // returns a promise but we don't need it
+        // save to db - returns a promise but we don't need it
         await url.save();
         // return our new instance
         res.json(url);
