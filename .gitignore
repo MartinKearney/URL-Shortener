@@ -9,8 +9,6 @@ node_modules/
 # production
 /client/build
 
-# misc
-.DS_Store
 # all .env files
 *.env
 /client/.env.local
