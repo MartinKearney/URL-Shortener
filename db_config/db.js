@@ -1,17 +1,15 @@
 const mongoose = require('mongoose');
 
-// make environment variables available as key-value
-// pairs in 'process.env'.
+// make environment variables available
 require('dotenv').config();
 
-// want to use env var instead
 const db = process.env.MONGO_URI;
 
 const connectDB = async () => {
   try {
     await mongoose.connect(db, {
       useNewUrlParser: true,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
     });
     console.log('MongoDB connected...');
   } catch (err) {
