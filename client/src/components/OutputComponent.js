@@ -21,7 +21,10 @@ const OutputComponent = ({ outputUrl }) => {
         />
         <div className='text-center'>
           <CopyToClipboard text={outputUrl}>
-            <button className='btn btn-dark w-25 my-4'>
+            <button
+              className='btn btn-dark w-25 my-4'
+              style={{ minWidth: '8rem' }}
+            >
               Copy to Clipboard
             </button>
           </CopyToClipboard>

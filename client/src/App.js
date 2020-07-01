@@ -9,7 +9,7 @@ const App = () => {
   const [outputUrl, setOutputUrl] = useState('');
   const [alertText, setAlertText] = useState(null);
 
-  const createUrl = async longUrl => {
+  const createUrl = async (longUrl) => {
     try {
       // hit shorten endpoint with longUrl as body
       const newUrl = await axios.post('/api/url/shorten', { longUrl: longUrl });
