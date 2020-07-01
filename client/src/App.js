@@ -26,8 +26,8 @@ const App = () => {
 
   const setAlert = () => {
     setAlertText('Please enter a valid URL');
-    // remove warning after 3 seconds
-    setTimeout(() => setAlertText(null), 3000);
+    // remove warning after 5 seconds
+    setTimeout(() => setAlertText(null), 5000);
   };
 
   return (
